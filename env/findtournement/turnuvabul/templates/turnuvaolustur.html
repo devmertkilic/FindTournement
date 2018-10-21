@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+ <!--DENEME BÖLÜMÜ!-->
+ <p>TURNUVANIZI YAYINLAMAMIZ İÇİN LÜTFEN BİLGİLERİ DOLDURUNUZ</p>
+  <div class="container">
+
+<div class="col-md-6">
+
+   <div class="form-group">
+   <label for="text">Turnuva Alanınız</label>
+    <select id="ddlViewBy" class="form-control" style="width:50%">
+
+  <option value="1" disabled>SPOR</option>
+  <option value="2" >Futbol</option>
+  <option value="3" >Basketbol</option>
+  <option value="4" >Voleybol</option>
+  <option value="5" >Hentbol</option>
+  <option value="3" disabled>E-SPOR</option>
+
+  <option value="3">League of Legends</option>
+  <option value="3">Dota 2</option>
+  <option value="3">CS:GO</option>
+  <option value="3">Metin2</option>
+  <option value="3">Knight</option>
+
+</select>
+
+
+
+
+   <label for="text">Ad-Soyad</label>
+    <input type="text" class="form-control" id="ad-soyad" style="width:50%">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email" style="width:50%">
+  </div>
+  <div class="form-group">
+    <label for="content">Açıklama:</label>
+    <input type="text" id="content" style="height:100px; display:block; width:70%">
+  </div>
+
+    <div class="form-group">
+        <label>Upload Image</label>
+        <div class="input-group">
+            <span class="input-group-btn">
+                <span class="btn btn-default btn-file">
+                    Browse… <input type="file" id="imgInp">
+                </span>
+            </span>
+            <input type="text" class="form-control" readonly>
+        </div>
+        <img id='img-upload'/>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+
+
+</div>
+</div>
+
+
+
+
+   <!--DENEME BÖLÜMÜ!-->
+{% endblock %}
