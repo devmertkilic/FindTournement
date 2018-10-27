@@ -1,81 +1,176 @@
-﻿{% extends 'base.html'%}
+{% extends 'base.html'%}
 {% load static %}
 
 {% block content %}
-  <!-- Yana acılan menu -->
-    <ul class="nav nav-stacked">
-      <li>
-        <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#" >
-            Spor
-            <i class="icon icon-caret-right"></i>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Futbol</a></li>
-            <li><a href="#">Satranç</a></li>
-            <li><a href="#">Basketbol</a></li>
-          </ul>
-        </div>
-      </li>
-      <li>
-          <div class="btn-group">
-          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-            E-spor
-            <i class="icon icon-caret-right"></i>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Dota 2</a></li>
-            <li><a href="#">Cs go</a></li>
-            <li><a href="#">Lol</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
 
 <!-- sayfalar -->
-<div class="container">
 
-  	<hr>
-  	<div class="row">
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading"><h3>Hello.</h3></div>
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-            Aliquam in felis sit amet augue.
-            </div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+.leftcolumn {
+    float: left;
+    width: 15%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: right;
+    width: auto%;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 25px;
+}
+
+
+
+/* Style the sidenav links and the dropdown button */
+ a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+/* On mouse-over */
+ a:hover, .dropdown-btn:hover {
+    color: red;
+}
+
+/* Main content */
+
+/* Add an active class to the active dropdown button */
+.active {
+    background-color: #D3D3D3;
+    color: black;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    padding-left: 8px;
+}
+
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidenav a {font-size: 18px;}
+}
+</style>
+<div class="leftcolumn">
+  <button class="dropdown-btn">Dropdown
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+  <button class="dropdown-btn">Dropdown
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-preview">
+            <!-- Sayfa başlangıç yeri -->
+            <a href="#">
+              <h2 class="post-title">
+BASLIK              </h2>
+              <div class="fakeimg" style="height:100%; width:100%">Image</div>
+                </a>
+              <h3 class="post-subtitle">
+Altbaslık              </h3>
+            <p class="post-meta">Yayınlanma tarihi</p>
           </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading"><h3>Hello.</h3></div>
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-            Aliquam in felis sit amet augue.
-            </div>
+          <hr>
+          <div class="post-preview">
+            <!-- Sayfa başlangıç yeri -->
+            <a href="#">
+              <h2 class="post-title">
+BASLIK              </h2>
+              <div class="fakeimg" style="height:100%; width:100%">Image</div>
+                </a>
+              <h3 class="post-subtitle">
+Altbaslık              </h3>
+            <p class="post-meta">Yayınlanma tarihi</p>
           </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-heading"><h3>Hello.</h3></div>
-            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-            Aliquam in felis sit amet augue.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.
-
-            </div>
+          <hr>
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                Science has not yet mastered prophecy
+              </h2>
+              <h3 class="post-subtitle">
+                We predict too much for the next year and yet far too little for the next ten.
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on August 24, 2018</p>
           </div>
-        </div>
-    </div>
+          <hr>
 
+        </div>
+        <!-- Sag kısım -->
+          <div class="rightcolumn">
+      <h3>Popular Post</h3>
+      <a href="#.html">
+        <h3 class="post-title">
+          Baslık 1
+</h3>
+      <div class="fakeimg">Image</div><br>
+    </a>
+    <a href="#.html">
+      <h3 class="post-title">
+        Baslık 2
+</h3>
+      <div class="fakeimg">Image</div><br>
+    </a>
+    <a href="#.html">
+      <h3 class="post-title">
+        Baslık 3</h3>
+      <div class="fakeimg">Image</div>
+    </a>
+    </div>
+  </div>
+
+
+
+  <script>
+  /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+  </script>
 {% endblock %}
